@@ -42,7 +42,7 @@ export default function HeroBanner() {
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url('${slide.image}')` }}
           />
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/70" style={{ backgroundColor:  "rgba(35, 61, 86, .63)"}} />
         </div>
       ))}
 
