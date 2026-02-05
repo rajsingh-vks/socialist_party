@@ -124,7 +124,8 @@ export default function Header() {
 
           {/* Mobile Hamburger */}
           <button
-            className="md:hidden"
+            className="md:hidden text-black font-semibold hover:text-blue-600 focus:outline-none"
+            style={{ fontSize: "22px" }}
             onClick={() => setOpen(open ? false : 'about')}
           >
             ☰
@@ -134,12 +135,12 @@ export default function Header() {
         {/* Mobile Menu */}
         {open && (
           <div className="flex flex-col gap-4 border-t bg-white p-4 md:hidden">
-            <Link href="/">Home</Link>
-            <Link href="/dashboard">Dashboard</Link>
+            <Link href="/" className="text-black font-semibold">Home</Link>
+            <Link href="/dashboard" className="text-black font-semibold">Dashboard</Link>
             {/* About with mobile submenu */}
             <div className="relative">
               <button
-                className="flex w-full items-center justify-between px-2 py-2 hover:text-blue-600 focus:outline-none"
+                className="flex w-full items-center justify-between px-2 py-2 text-black font-semibold hover:text-blue-600 focus:outline-none"
                 onClick={() => setOpen(open === 'about' ? false : 'about')}
               >
                 About
@@ -147,20 +148,20 @@ export default function Header() {
               </button>
               {open === 'about' && (
                 <div className="flex flex-col gap-0 bg-white border border-gray-200 rounded-lg shadow-lg mt-1">
-                  <Link href="/about/national-executive-committee" className="block px-4 py-2 hover:bg-gray-100">National Executive Committee 2025-2027</Link>
-                  <Link href="/about/objectives" className="block px-4 py-2 hover:bg-gray-100">Objectives</Link>
-                  <Link href="/about/history" className="block px-4 py-2 hover:bg-gray-100">History</Link>
-                  <Link href="/about/structure" className="block px-4 py-2 hover:bg-gray-100">Structure</Link>
-                  <Link href="/about/membership" className="block px-4 py-2 hover:bg-gray-100">Membership</Link>
-                  <Link href="/about/policy-positions" className="block px-4 py-2 hover:bg-gray-100">Policy Positions</Link>
-                  <Link href="/about/political-resolution" className="block px-4 py-2 hover:bg-gray-100">Political Resolution</Link>
+                  <Link href="/about/national-executive-committee" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">National Executive Committee 2025-2027</Link>
+                  <Link href="/about/objectives" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Objectives</Link>
+                  <Link href="/about/history" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">History</Link>
+                  <Link href="/about/structure" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Structure</Link>
+                  <Link href="/about/membership" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Membership</Link>
+                  <Link href="/about/policy-positions" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Policy Positions</Link>
+                  <Link href="/about/political-resolution" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Political Resolution</Link>
                 </div>
               )}
             </div>
             {/* Socialist Ideas with mobile submenu */}
             <div className="relative">
               <button
-                className="flex w-full items-center justify-between px-2 py-2 hover:text-blue-600 focus:outline-none"
+                className="flex w-full items-center justify-between px-2 py-2 text-black font-semibold hover:text-blue-600 focus:outline-none"
                 onClick={() => setOpen(open === 'ideas' ? false : 'ideas')}
               >
                 Socialist Ideas
@@ -168,24 +169,24 @@ export default function Header() {
               </button>
               {open === 'ideas' && (
                 <div className="flex flex-col gap-0 bg-white border border-gray-200 rounded-lg shadow-lg mt-1">
-                  <Link href="/ideas/updates" className="block px-4 py-2 hover:bg-gray-100">Updates</Link>
-                  <Link href="/ideas/commentary" className="block px-4 py-2 hover:bg-gray-100">Commentary</Link>
-                  <Link href="/ideas/press-releases" className="block px-4 py-2 hover:bg-gray-100">Press Releases</Link>
-                  <Link href="/ideas/events" className="block px-4 py-2 hover:bg-gray-100">Events</Link>
-                  <Link href="/ideas/letters-petitions" className="block px-4 py-2 hover:bg-gray-100">Letters and Petitions</Link>
-                  <Link href="/ideas/fundraising-appeals" className="block px-4 py-2 hover:bg-gray-100">Fundraising Appeals</Link>
-                  <Link href="/ideas/videos" className="block px-4 py-2 hover:bg-gray-100">Videos</Link>
-                  <Link href="/ideas/states" className="block px-4 py-2 hover:bg-gray-100">States</Link>
-                  <Link href="/ideas/satyagraha" className="block px-4 py-2 hover:bg-gray-100">Satyagraha: Online Discussions</Link>
-                  <Link href="/ideas/save-ganga" className="block px-4 py-2 hover:bg-gray-100">Save the Ganga Campaign</Link>
-                  <Link href="/ideas/socialist-ideas" className="block px-4 py-2 hover:bg-gray-100">Socialist Ideas</Link>
+                  <Link href="/ideas/updates" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Updates</Link>
+                  <Link href="/ideas/commentary" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Commentary</Link>
+                  <Link href="/ideas/press-releases" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Press Releases</Link>
+                  <Link href="/ideas/events" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Events</Link>
+                  <Link href="/ideas/letters-petitions" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Letters and Petitions</Link>
+                  <Link href="/ideas/fundraising-appeals" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Fundraising Appeals</Link>
+                  <Link href="/ideas/videos" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Videos</Link>
+                  <Link href="/ideas/states" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">States</Link>
+                  <Link href="/ideas/satyagraha" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Satyagraha: Online Discussions</Link>
+                  <Link href="/ideas/save-ganga" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Save the Ganga Campaign</Link>
+                  <Link href="/ideas/socialist-ideas" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Socialist Ideas</Link>
                 </div>
               )}
             </div>
             {/* Affiliate and Partner Organizations with mobile submenu */}
             <div className="relative">
               <button
-                className="flex w-full items-center justify-between px-2 py-2 hover:text-blue-600 focus:outline-none"
+                className="flex w-full items-center justify-between px-2 py-2 text-black font-semibold hover:text-blue-600 focus:outline-none"
                 onClick={() => setOpen(open === 'affiliate' ? false : 'affiliate')}
               >
                 Affiliate and Partner Organizations
@@ -193,19 +194,19 @@ export default function Header() {
               </button>
               {open === 'affiliate' && (
                 <div className="flex flex-col gap-0 bg-white border border-gray-200 rounded-lg shadow-lg mt-1">
-                  <Link href="/affiliate/organizations" className="block px-4 py-2 hover:bg-gray-100">Affiliate and Partner Organizations</Link>
-                  <Link href="/affiliate/eco-socialist-front" className="block px-4 py-2 hover:bg-gray-100">Eco-Socialist Front</Link>
-                  <Link href="/affiliate/socialist-yuvjan-sabha" className="block px-4 py-2 hover:bg-gray-100">Socialist Yuvjan Sabha</Link>
-                  <Link href="/affiliate/socialist-mazdoor-sabha" className="block px-4 py-2 hover:bg-gray-100">Socialist Mazdoor Sabha</Link>
-                  <Link href="/affiliate/socialist-kisan-sabha" className="block px-4 py-2 hover:bg-gray-100">Socialist Kisan Sabha</Link>
-                  <Link href="/affiliate/rihai-manch" className="block px-4 py-2 hover:bg-gray-100">Rihai Manch</Link>
+                  <Link href="/affiliate/organizations" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Affiliate and Partner Organizations</Link>
+                  <Link href="/affiliate/eco-socialist-front" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Eco-Socialist Front</Link>
+                  <Link href="/affiliate/socialist-yuvjan-sabha" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Socialist Yuvjan Sabha</Link>
+                  <Link href="/affiliate/socialist-mazdoor-sabha" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Socialist Mazdoor Sabha</Link>
+                  <Link href="/affiliate/socialist-kisan-sabha" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Socialist Kisan Sabha</Link>
+                  <Link href="/affiliate/rihai-manch" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Rihai Manch</Link>
                 </div>
               )}
             </div>
             {/* Documents and Records with mobile submenu */}
             <div className="relative">
               <button
-                className="flex w-full items-center justify-between px-2 py-2 hover:text-blue-600 focus:outline-none"
+                className="flex w-full items-center justify-between px-2 py-2 text-black font-semibold hover:text-blue-600 focus:outline-none"
                 onClick={() => setOpen(open === 'documents' ? false : 'documents')}
               >
                 Documents and Records
@@ -213,20 +214,20 @@ export default function Header() {
               </button>
               {open === 'documents' && (
                 <div className="flex flex-col gap-0 bg-white border border-gray-200 rounded-lg shadow-lg mt-1">
-                  <Link href="/documents/constitution" className="block px-4 py-2 hover:bg-gray-100">Constitution</Link>
-                  <Link href="/documents/audit-reports" className="block px-4 py-2 hover:bg-gray-100">Yearly Audit Reports</Link>
-                  <Link href="/documents/covid-relief-financials" className="block px-4 py-2 hover:bg-gray-100">Financial Details of UP Covid-19 Relief Work</Link>
-                  <Link href="/documents/election-candidates" className="block px-4 py-2 hover:bg-gray-100">Details of Election Candidates Fielded by SP(I)</Link>
-                  <Link href="/documents/loans-mazdoor-sabha" className="block px-4 py-2 hover:bg-gray-100">Loans Disbursed Through Socialist Mazdoor Sabha</Link>
-                  <Link href="/documents/domestic-violence" className="block px-4 py-2 hover:bg-gray-100">Domestic Violence Resources</Link>
-                  <Link href="/documents/helplines" className="block px-4 py-2 hover:bg-gray-100">Important Helpline/Complaint Numbers</Link>
-                  <Link href="/documents/bank-accounts" className="block px-4 py-2 hover:bg-gray-100">Party Bank Accounts</Link>
-                  <Link href="/documents/pan-card" className="block px-4 py-2 hover:bg-gray-100">Socialist Party (India) PAN Card</Link>
-                  <Link href="/documents/photo-gallery" className="block px-4 py-2 hover:bg-gray-100">Photo Gallery</Link>
+                  <Link href="/documents/constitution" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Constitution</Link>
+                  <Link href="/documents/audit-reports" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Yearly Audit Reports</Link>
+                  <Link href="/documents/covid-relief-financials" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Financial Details of UP Covid-19 Relief Work</Link>
+                  <Link href="/documents/election-candidates" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Details of Election Candidates Fielded by SP(I)</Link>
+                  <Link href="/documents/loans-mazdoor-sabha" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Loans Disbursed Through Socialist Mazdoor Sabha</Link>
+                  <Link href="/documents/domestic-violence" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Domestic Violence Resources</Link>
+                  <Link href="/documents/helplines" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Important Helpline/Complaint Numbers</Link>
+                  <Link href="/documents/bank-accounts" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Party Bank Accounts</Link>
+                  <Link href="/documents/pan-card" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Socialist Party (India) PAN Card</Link>
+                  <Link href="/documents/photo-gallery" className="block px-4 py-2 text-black font-semibold hover:bg-gray-100">Photo Gallery</Link>
                 </div>
               )}
             </div>
-            <button className="rounded-lg bg-blue-600 px-4 py-2 text-white">
+            <button className="rounded-lg bg-white px-4 py-2 text-black font-semibold border border-black">
               Login
             </button>
           </div>
